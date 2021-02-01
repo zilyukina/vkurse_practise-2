@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-size: 20px;
+}
+.block {
+    padding: 20px;
+}
+.block--one {
+    background: rgba(58, 77, 167, 1);
+}
+.block--two {
+    background: rgba(58, 77, 167, 0.8);
+}
+.block--three {
+    background: rgba(58, 77, 167, 0.6);
+}
+.block--four {
+    background: rgba(58, 77, 167, 0.4);
+}
+.wrapper {
+    display: grid;
+    /* grid-template-columns: 200px 200px 200px 200px;*/
+    /* grid-template-columns: repeat(4, 1fr);*/
+    /* grid-template-rows: 1fr 1fr 1fr;*/
+    /* grid-gap: 2vw;*/
+    /* grid-column-gap: 10px;*/
+    /* grid-row-gap: 20px;*/
+
+    grid-template-columns: [start] 1fr [second] 1fr [third] 1fr [fourth] 1fr [last];
+    /* grid-template-columns: [start] repeat(4, 1fr); */
+    grid-template-rows: [start] repeat(2, 1fr) [middle] repeat(2, 1fr);
+}
+.block--example {
+    /* grid-row-start: 1;*/
+    /* grid-row-end: 4;*/
+    /* grid-column-start: 1;*/
+    /*  grid-column-end: 4;*/
+
+    /*grid-row-start: span 2; */
+    /* grid-column-start: span 2; */
+
+    /* grid-row: 1 / 4;*/
+    /* grid-column: 1 / 4;*/
+
+    /* grid-area: 1 / 2 / 4/ 4; */
+
+    grid-row-start: 1;
+    grid-row-end: middle;
+    grid-column-start: start;
+    grid-column-end: third;
+}
